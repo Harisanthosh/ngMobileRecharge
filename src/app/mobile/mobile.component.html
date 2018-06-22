@@ -1,0 +1,65 @@
+<p>
+  Mobile Plans
+</p>
+<div class="nav navbar-expand">
+  <label> Filter </label>
+  <input type="text" name="srchString" [(ngModel)]='srchString'>
+</div>
+<table class="table table-striped">
+  <tr>
+    <th>Plan Name</th>
+    <th>Talk Time</th>
+    <th>SMS</th>
+    <th>Data Usage</th>
+  </tr>
+
+  <tr *ngFor="let plan of mobilePlanList |filter:'name':srchString">
+    <td>{{plan.name}}</td>
+    <td>{{plan.talktime}}</td>
+    <td>{{plan.sms}}</td>
+    <td>{{plan.data}}</td>
+  </tr>
+</table>
+
+<br />
+<div style=" text-align: center;">
+  <button class="btn btn-info" (click)="getMobilePlan(1)">Get plan by Id</button>
+</div>
+<br />
+
+
+<table class="table table-striped" *ngIf="show">
+  <tr>
+    <th>Plan Name</th>
+    <th>Talk Time</th>
+    <th>SMS</th>
+    <th>Data Usage</th>
+  </tr>
+
+  <tr>
+    <td>{{mobilePlan.name}}</td>
+    <td>{{mobilePlan.talktime}}</td>
+    <td>{{mobilePlan.sms}}</td>
+    <td>{{mobilePlan.data}}</td>
+  </tr>
+</table>
+
+<br/>
+<h2>Post plan</h2>
+<form  class="form-group" #frm='ngForm' (ngSubmit)='submit(frm.value)' class="form-inline" [noValidate]='false'>
+  <label class="form-group" for="">Plan Name</label>
+  <input type="text" name="name" id="name" placeholder="Plan Name" ngModel required>
+  <br />
+  <label class="form-group" for="">Talk Time</label>
+  <input type="text" name="talktime" id="talktime" placeholder="Talk Time" ngModel required>
+  <br />
+  <label class="form-group" for="">SMS</label>
+  <input type="text" name="sms" id="sms" placeholder="SMS" ngModel required>
+  <br />
+  <label class="form-group" for="">Data Usage</label>
+  <input type="text" name="data" id="data" placeholder="Data Usage" ngModel required>
+  <br />
+
+
+  <button [disabled]="frm.invalid">Submit</button>
+</form>

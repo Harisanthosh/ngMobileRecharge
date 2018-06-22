@@ -1,0 +1,62 @@
+{
+  "mobilePlans": [
+    {
+      "id": 1,
+      "name": "199",
+      "talktime": "200mts",
+      "sms": 100,
+      "data": "100MB"
+    },
+    {
+      "id": 2,
+      "name": "99",
+      "talktime": "100mts",
+      "sms": 100,
+      "data": "100MB"
+    },
+    {
+      "email": "200MB",
+      "id": 3
+    },
+    {
+      "name": "200",
+      "talktime": "200mts",
+      "sms": "200",
+      "data": "200MB",
+      "id": 4
+    },
+    {
+      "name": "500",
+      "talktime": "500mts",
+      "sms": "500",
+      "data": "500MB",
+      "id": 5
+    }
+  ],
+  "dthPlans": [
+    {
+      "id": 1,
+      "name": "999",
+      "validity": "6months"
+    },
+    {
+      "id": 2,
+      "name": "1999",
+      "validity": "1year"
+    }
+  ],
+  "bbandPlans": [
+    {
+      "id": 1,
+      "name": "499",
+      "validity": "6months",
+      "data": "100MB"
+    },
+    {
+      "id": 2,
+      "name": "1999",
+      "validity": "1year",
+      "data": "100MB"
+    }
+  ]
+}
